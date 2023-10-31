@@ -7,7 +7,7 @@ This repository contains a web app built using Python FastAPI that leverages a t
 To generate text embeddings using the text embedding large language model, you can make POST requests to the following endpoint using `curl`:
 
 ```bash
-curl --location 'http://0.0.0.0:8001/api/text-embeddings' \
+curl --location 'http://0.0.0.0/api/text-embeddings' \
 --header 'Content-Type: application/json' \
 --data '{
   "inputList": ["Sample sentence", "put your long text here", "hello world"]
@@ -41,10 +41,10 @@ To build and run the Docker container for this web app, follow these steps:
 4. Run the Docker container:
 
    ```bash
-   docker run -p 8001:8001 text-embedding-app
+   docker run -p 80:80 text-embedding-app
    ```
 
-The web app will be accessible at [http://0.0.0.0:8001](http://0.0.0.0:8001).
+The web app will be accessible at [http://0.0.0.0](http://0.0.0.0).
 
 ## Dependencies
 
